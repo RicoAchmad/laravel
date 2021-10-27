@@ -79,6 +79,6 @@ Route::get('posting/{id}', function ($a) {
 });
 
 
-Route::get('{nama}/{alamat}/{jk}/{tb}/{bb}' , function ($nama , $alamat , $jk , $tb , $bb) {
+Route::get('biodata/{nama?}/{alamat?}/{jk?}/{tb?}/{bb?}' , function ($nama = null, $alamat = null , $jk = null , $tb = null , $bb = null) {
     return view('bio', compact('nama' , 'alamat' , 'jk' , 'tb' , 'bb'));
 });

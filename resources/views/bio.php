@@ -13,50 +13,66 @@
         biodata
     </legend>
     <table>
+        <?php if ($nama == null) {
+            echo "Silahkan Isi Biodata Anda";
+        } else if ($nama != null){
+        ?>
     <tr>
         <td>
         Nama Saya
         </td>
         <td>:</td>
         <td>
-        <?php echo $nama; ?>
+        <?php echo $nama;
+        ?>
+
         </td>
+        <?php } ?>
     </tr>
     <tr>
         <td>
+        <?php if($alamat != NULL) {?>
         Alamat
         </td>
         <td>:</td>
         <td>
         <?php echo $alamat; ?>
         </td>
+        <?php } ?>
     </tr>
+
     <tr>
         <td>
+        <?php if($jk != NULL) {?>
         Jenis Kelamin
         </td>
         <td>:</td>
         <td>
         <?php echo $jk; ?>
         </td>
+        <?php } ?>
     </tr>
     <tr>
         <td>
+        <?php if($tb != NULL) {?>
         Tinggi Badan
         </td>
         <td>:</td>
         <td>
-        <?php echo $tb; ?> CM
+        <?php echo $tb; ?>
         </td>
+        <?php } ?>
     </tr>
     <tr>
         <td>
+        <?php if($bb != NULL) {?>
         Berat Badan
         </td>
         <td>:</td>
         <td>
-        <?php echo $bb; ?> KG
+        <?php echo $bb; ?>
         </td>
+        <?php } ?>
     </tr>
     </table>
 </fieldset>

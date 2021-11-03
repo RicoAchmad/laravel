@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
         //$this->call(pesanan::class);
         //$this->call(pembelian::class);
         //$this->call(suplier::class);
-        $this->call(pembeli::class);
+        //$this->call(pembeli::class);
+        $this->call(hero::class);
 
     }
 }

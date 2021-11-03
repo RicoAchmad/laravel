@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 //use App\Models\Post;
+use App\Models\hero;
 use App\Models\pembelian;
+use App\Models\single;
 
 class MyController extends Controller
 {
@@ -30,9 +32,22 @@ class MyController extends Controller
         return view('pembelian', compact('pembelian'));
     }
 
-    public function singlepembelian()
+    public function single($id)
     {
-        $pembelian = pembelian::findOrFail($id);
-        return view('singlepembelian', compact('pembelian'));
+        $data = pembelian::findOrFail($id);
+        return view('single', compact('data'));
     }
+
+    public function hero()
+    {
+        $hero = hero::all();
+        return view('hero', compact('hero'));
+    }
+
+    public function singlehero($id)
+    {
+        $data = hero::findOrFail($id);
+        return view('singlehero', compact('data'));
+    }
+
 }

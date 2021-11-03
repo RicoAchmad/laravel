@@ -150,7 +150,20 @@ Route::get('data-siswa', [MyController::class, 'index']
 Route::get('posts', [MyController::class, 'posting']
 );
 
-Route::get('pembelian/{}', [MyController::class, 'pembelian']
+Route::get('pembelian', [MyController::class, 'pembelian']
 );
 
-Route::get('singlepembelian/{id}', [MyController::class, 'pembelian']);
+Route::get('pembelian/{id}', [MyController::class, 'single']
+);
+
+Route::get('hero', [MyController::class, 'hero']
+);
+
+Route::get('hero/{id}', [MyController::class, 'singlehero']
+);
+
+Route::get('hero-delete/{id}', function ($id) {
+    $query = App\Models\hero::find($id);
+    $query->delete;
+    return redirect('/hero');
+});
